@@ -8,9 +8,9 @@ module.exports = {
     '**/*.{js,jsx,ts,tsx}',
     '!**/@next/ApiReq/*',
     '!**/@next/utils/*',
-    '!**/@next/hooks/*',
-    '!**/@next/store/slices/auth/*',
-    '!**/*.d.ts'
+    // '!**/@next/hooks/*',
+    // '!**/@next/store/slices/auth/*',
+    // '!**/*.d.ts'
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/\\.next/'],
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -30,3 +30,9 @@ module.exports = {
     //Handle module aliases
     '^@/components/(.*)$': '<rootDir>/components/$1'
   },
+let validatorsCount = Validators.find({}).count();
+
+if (validatorsCount == 0){
+    console.log("no validators");
+    
+}
